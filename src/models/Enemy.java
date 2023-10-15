@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Enemy {
-    private double x, y;
+    private int x, y;
     private int speed;
     private double radian;
     private Image texture;
@@ -24,7 +24,7 @@ public class Enemy {
         rotate(targetX, targetY);
 
         try {
-            BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\TankVsZombie\\images\\zombie.png"));
+            BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\zombie.png"));
             texture = bufferedImage.getScaledInstance(zombieWidth, zombieHeight, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             System.out.println("Zombie model texture exception: " + e.getMessage());
@@ -43,11 +43,11 @@ public class Enemy {
         this.radian = Math.toRadians(angle);
     }
 
-    public double getX() {
+    public int getX() {
         return x;
     }
 
-    public double getY() {
+    public int getY() {
         return y;
     }
 }

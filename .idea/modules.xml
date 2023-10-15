@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TankVsZombie.iml" filepath="$PROJECT_DIR$/TankVsZombie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tankocalypse-ZombieCarnage.iml" filepath="$PROJECT_DIR$/Tankocalypse-ZombieCarnage.iml" />
     </modules>
   </component>
 </project>

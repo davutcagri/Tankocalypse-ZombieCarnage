@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Character {
+public class Character extends Model{
     private final int characterWidth, characterHeight;
     private int x, y;
     private double radian;
@@ -19,7 +19,7 @@ public class Character {
         this.characterHeight = 60;
 
         try {
-            BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\TankVsZombie\\images\\character.png"));
+            BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\character.png"));
             texture = bufferedImage.getScaledInstance(characterWidth, characterHeight, Image.SCALE_DEFAULT);
         } catch (IOException e) {
             System.out.println("Character model texture exception: " + e.getMessage());

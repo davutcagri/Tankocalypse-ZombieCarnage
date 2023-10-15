@@ -44,7 +44,7 @@ public class GamePanel extends JPanel {
         this.add(scoreLabel);
 
         try {
-            map = ImageIO.read(new File("D:\\work\\TankVsZombie\\images\\map.png"));
+            map = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\map.png"));
         } catch (IOException e) {
             System.out.println("Map texture exception: " + e.getMessage());
         }

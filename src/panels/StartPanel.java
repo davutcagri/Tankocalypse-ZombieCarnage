@@ -16,8 +16,8 @@ public class StartPanel extends JPanel {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         try {
-            backgroundImage = ImageIO.read(new File("D:\\work\\TankVsZombie\\images\\background.jpg"));
-            Image logo = ImageIO.read(new File("D:\\work\\TankVsZombie\\images\\logo.png"));
+            backgroundImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\background.jpg"));
+            Image logo = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\logo.png"));
             JLabel logoLabel = new JLabel(new ImageIcon(logo));
             logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
             this.add(logoLabel);
