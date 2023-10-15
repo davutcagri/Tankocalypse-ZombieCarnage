@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ffd8c36-6232-4aed-8c40-f80bafb9f78c" name="Changes" comment="update 2">
-      <change afterPath="$PROJECT_DIR$/src/models/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="8ffd8c36-6232-4aed-8c40-f80bafb9f78c" name="Changes" comment="u">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TankVsZombie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tankocalypse-ZombieCarnage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/character.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/character.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panels/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/panels/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/StartPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Model.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +113,7 @@
       <workItem from="1697122380465" duration="161000" />
       <workItem from="1697122925996" duration="92000" />
       <workItem from="1697371571890" duration="32000" />
-      <workItem from="1697371640774" duration="1478000" />
+      <workItem from="1697371640774" duration="5050000" />
     </task>
     <task id="LOCAL-00001" summary="update 2">
       <option name="closed" value="true" />
@@ -136,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697042190653</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1697373268493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697373268493</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +148,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 2" />
+    <MESSAGE value="u" />
+    <option name="LAST_COMMIT_MESSAGE" value="u" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TankVsZombie$Main.ic" NAME="Main Coverage Results" MODIFIED="1696419568330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
