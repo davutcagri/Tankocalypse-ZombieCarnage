@@ -52,12 +52,4 @@ public class Bullet extends Thread {
             }
         }
     }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
 }

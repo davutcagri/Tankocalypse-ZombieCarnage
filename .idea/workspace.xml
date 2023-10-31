@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ffd8c36-6232-4aed-8c40-f80bafb9f78c" name="Changes" comment="u">
+    <list default="true" id="8ffd8c36-6232-4aed-8c40-f80bafb9f78c" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/images/old_background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uml/UML.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uml/UML.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uml/UML.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panels/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panels/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/StartPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,24 +44,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/work/Tankocalypse-ZombieCarnage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/work/Tankocalypse-ZombieCarnage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\work" />
@@ -113,7 +121,16 @@
       <workItem from="1697122380465" duration="161000" />
       <workItem from="1697122925996" duration="92000" />
       <workItem from="1697371571890" duration="32000" />
-      <workItem from="1697371640774" duration="5050000" />
+      <workItem from="1697371640774" duration="5070000" />
+      <workItem from="1697482413042" duration="492000" />
+      <workItem from="1697539415946" duration="1053000" />
+      <workItem from="1697540535937" duration="168000" />
+      <workItem from="1697541312860" duration="2491000" />
+      <workItem from="1697555490811" duration="701000" />
+      <workItem from="1697636052099" duration="1387000" />
+      <workItem from="1697714994668" duration="1238000" />
+      <workItem from="1698188253139" duration="28000" />
+      <workItem from="1698756647285" duration="896000" />
     </task>
     <task id="LOCAL-00001" summary="update 2">
       <option name="closed" value="true" />
@@ -139,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697373268493</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <option name="closed" value="true" />
+      <created>1697376768755</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697376768755</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +174,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update 2" />
     <MESSAGE value="u" />
-    <option name="LAST_COMMIT_MESSAGE" value="u" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TankVsZombie$Main.ic" NAME="Main Coverage Results" MODIFIED="1696419568330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

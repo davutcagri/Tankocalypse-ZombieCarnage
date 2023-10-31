@@ -28,7 +28,7 @@ public class StartPanel extends JPanel {
         JButton startButton = new JButton("Start");
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         startButton.setFont(new Font("Arial", Font.BOLD, 24));
-        startButton.setMaximumSize(new Dimension(100, 50));
+        startButton.setMaximumSize(new Dimension(200, 50));
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -39,10 +39,24 @@ public class StartPanel extends JPanel {
 
         this.add(Box.createVerticalStrut(10)); // 10px space
 
+        JButton settingsButton = new JButton("Settings");
+        settingsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+        settingsButton.setFont(new Font("Arial", Font.BOLD, 24));
+        settingsButton.setMaximumSize(new Dimension(200, 50));
+        settingsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        this.add(settingsButton);
+
+        this.add(Box.createVerticalStrut(10)); // 10px space
+
         JButton exitButton = new JButton("Exit");
         exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         exitButton.setFont(new Font("Arial", Font.BOLD, 24));
-        exitButton.setMaximumSize(new Dimension(100, 50));
+        exitButton.setMaximumSize(new Dimension(200, 50));
         exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -56,7 +70,8 @@ public class StartPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (backgroundImage != null) {
-            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+            g.drawImage(backgroundImage, 0, 0, 904, 700, this);
         }
+
     }
 }

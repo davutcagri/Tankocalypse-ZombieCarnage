@@ -26,4 +26,37 @@ public class Enemy extends Model{
             System.out.println("Zombie model texture exception: " + e.getMessage());
         }
     }
+
+    Runnable r = new Runnable() {
+        @Override
+        public void run() {
+            double dx = targetX - getX();
+            double dy = targetY - getY();
+            double distance = Math.sqrt(dx * dx + dy * dy);
+            double stepX = (dx / distance) * speed / 1000.0;
+            double stepY = (dy / distance) * speed / 1000.0;
+
+            while (true) {
+                double newX = getX() + stepX;
+                double newY = getY() + stepY;
+                setX((int) newX);
+                setY((int) newY);
+
+                if(getX() == targetX && getY() == targetY) {
+                    break;
+                }
+
+                try {
+                    Thread.sleep(16);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+    };
+
+    public void start() {
+        Thread thread = new Thread(r);
+        thread.start();
+    }
 }

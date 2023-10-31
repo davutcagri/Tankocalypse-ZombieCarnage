@@ -7,10 +7,7 @@ import models.Enemy;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +17,6 @@ import java.util.List;
 import java.util.Random;
 
 public class GamePanel extends JPanel {
-
     private final int originX, originY;
     private final Character character;
     private BufferedImage map;
@@ -34,17 +30,16 @@ public class GamePanel extends JPanel {
         this.originY = screenHeight / 2;
         this.addMouseMotionListener(new GameMouseMotionListener());
         this.addMouseListener(new GameMouseClickListener());
+        this.addKeyListener(new GameKeyListener());
 
         character = new Character(originX, originY);
-        Enemy enemy = new Enemy(originX - 300, originY, originX, originY);
-        enemies.add(enemy);
 
         scoreLabel = new JLabel("Score: " + String.valueOf(score));
         scoreLabel.setFont(new Font("Arial", Font.BOLD, 24));
         this.add(scoreLabel);
 
         try {
-            map = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\map.png"));
+            map = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\map.jpg"));
         } catch (IOException e) {
             System.out.println("Map texture exception: " + e.getMessage());
         }
@@ -105,6 +100,26 @@ public class GamePanel extends JPanel {
                 }
             });
             timer.start();
+        }
+    }
+
+    public class GameKeyListener extends KeyAdapter {
+        @Override
+        public void keyTyped(KeyEvent e) {
+            System.out.println(e.getKeyChar());
+            /*if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+                Enemy enemy = new Enemy(originX - 300, originY, originX, originY);
+                enemy.start();
+                enemies.add(enemy);
+            }*/
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
         }
     }
 
