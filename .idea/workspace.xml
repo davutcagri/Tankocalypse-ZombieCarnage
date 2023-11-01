@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ffd8c36-6232-4aed-8c40-f80bafb9f78c" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/images/old_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/UML.drawio" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/UML.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/UML.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/panels/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/panels/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/StartPanel.java" afterDir="false" />
@@ -52,7 +45,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/work/Tankocalypse-ZombieCarnage&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/work/Artifact&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -130,7 +123,10 @@
       <workItem from="1697636052099" duration="1387000" />
       <workItem from="1697714994668" duration="1238000" />
       <workItem from="1698188253139" duration="28000" />
-      <workItem from="1698756647285" duration="896000" />
+      <workItem from="1698756647285" duration="6579000" />
+      <workItem from="1698779778519" duration="46000" />
+      <workItem from="1698782155162" duration="1562000" />
+      <workItem from="1698856988474" duration="2116000" />
     </task>
     <task id="LOCAL-00001" summary="update 2">
       <option name="closed" value="true" />
@@ -164,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697376768755</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <option name="closed" value="true" />
+      <created>1698757797602</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698757797602</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update">
+      <option name="closed" value="true" />
+      <created>1698757805011</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698757805011</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

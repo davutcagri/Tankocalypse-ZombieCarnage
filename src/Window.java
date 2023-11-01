@@ -14,8 +14,18 @@ public class Window extends JFrame {
     public Window(int screenWidth, int screenHeight) {
         this.screenWidth = screenWidth;
         this.screenHeight = screenHeight;
+        this.setTitle("Tank vs Zombies");
+        this.setSize(screenWidth, screenHeight);
+        this.setResizable(false);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        loadPanels();
+        this.add(cardPanel);
+        this.setVisible(true);
 
+    }
 
+    public void loadPanels() {
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
 
@@ -25,14 +35,6 @@ public class Window extends JFrame {
         cardLayout.show(cardPanel,  "startPage");
         cardPanel.add(startPanel, "startPage");
         cardPanel.add(gamePanel, "gamePage");
-
-        this.setTitle("Tank vs Zombies");
-        this.setSize(screenWidth, screenHeight);
-        this.setResizable(false);
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-        this.add(cardPanel);
-        this.setVisible(true);
     }
 
 }

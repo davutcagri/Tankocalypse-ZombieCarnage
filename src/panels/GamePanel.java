@@ -21,6 +21,7 @@ public class GamePanel extends JPanel {
     private final Character character;
     private BufferedImage map;
     private int score;
+    private int wave = 1;
     private JLabel scoreLabel;
     private List<Bullet> bullets = new ArrayList<>();
     private List<Enemy> enemies = new ArrayList<>();
@@ -28,9 +29,9 @@ public class GamePanel extends JPanel {
     public GamePanel(CardLayout cardLayout, JPanel cardPanel, int screenWidth, int screenHeight) {
         this.originX = screenWidth / 2;
         this.originY = screenHeight / 2;
-        this.addMouseMotionListener(new GameMouseMotionListener());
-        this.addMouseListener(new GameMouseClickListener());
-        this.addKeyListener(new GameKeyListener());
+        this.addMouseMotionListener(new GameMouseListener());
+        this.addMouseListener(new GameMouseListener());
+        this.addKeyListener(new GameKeyboardListener());
 
         character = new Character(originX, originY);
 
@@ -45,12 +46,40 @@ public class GamePanel extends JPanel {
         }
     }
 
+    public class GameMouseListener extends MouseAdapter {
+        public void mousePressed(MouseEvent e) {
+            Bullet bullet = new Bullet(originX - 5, originY - 5, 10, e.getX(), e.getY());
+            bullets.add(bullet);
+            bullet.start();
+
+            Timer timer = new Timer(16, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    repaint();
+                }
+            });
+            timer.start();
+        }
+
+        public void mouseMoved(MouseEvent e) {
+            character.rotate(e.getX(), e.getY());
+            repaint();
+        }
+    }
+
+    public class GameKeyboardListener extends KeyAdapter {
+        public void keyPressed(KeyEvent e) {
+            System.out.println(e.getKeyChar());
+        }
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         //Map
+        Graphics mapG = g.create();
         if (map != null) {
-            g.drawImage(map, 0, 0, getWidth(), getHeight(), this);
+            mapG.drawImage(map, 0, 0, getWidth(), getHeight(), this);
         }
 
         //Bullets
@@ -77,50 +106,4 @@ public class GamePanel extends JPanel {
         Graphics characterG = g.create();
         character.draw(characterG);
     }
-
-    public class GameMouseMotionListener extends MouseAdapter {
-        @Override
-        public void mouseMoved(MouseEvent e) {
-            character.rotate(e.getX(), e.getY());
-            repaint();
-        }
-    }
-
-    public class GameMouseClickListener extends MouseAdapter {
-        @Override
-        public void mousePressed(MouseEvent e) {
-            Bullet bullet = new Bullet(originX - 5, originY - 5, 10, e.getX(), e.getY());
-            bullets.add(bullet);
-            bullet.start();
-
-            Timer timer = new Timer(16, new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    repaint();
-                }
-            });
-            timer.start();
-        }
-    }
-
-    public class GameKeyListener extends KeyAdapter {
-        @Override
-        public void keyTyped(KeyEvent e) {
-            System.out.println(e.getKeyChar());
-            /*if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-                Enemy enemy = new Enemy(originX - 300, originY, originX, originY);
-                enemy.start();
-                enemies.add(enemy);
-            }*/
-        }
-
-        @Override
-        public void keyPressed(KeyEvent e) {
-        }
-
-        @Override
-        public void keyReleased(KeyEvent e) {
-        }
-    }
-
 }

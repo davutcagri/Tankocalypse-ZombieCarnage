@@ -13,6 +13,7 @@ public class StartPanel extends JPanel {
     private BufferedImage backgroundImage;
 
     public StartPanel(CardLayout cardLayout, JPanel cardPanel) {
+        System.out.println("Start Screen");
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         try {
@@ -25,6 +26,7 @@ public class StartPanel extends JPanel {
             System.out.println("Start screen texture exception: " + e.getMessage());
         }
 
+        // START BUTTON
         JButton startButton = new JButton("Start");
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         startButton.setFont(new Font("Arial", Font.BOLD, 24));
@@ -36,9 +38,11 @@ public class StartPanel extends JPanel {
             }
         });
         this.add(startButton);
+        // END OF START BUTTON
 
         this.add(Box.createVerticalStrut(10)); // 10px space
 
+        // SETTINGS BUTTON
         JButton settingsButton = new JButton("Settings");
         settingsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         settingsButton.setFont(new Font("Arial", Font.BOLD, 24));
@@ -50,9 +54,11 @@ public class StartPanel extends JPanel {
             }
         });
         this.add(settingsButton);
+        // END OF SETTINGS BUTTON
 
         this.add(Box.createVerticalStrut(10)); // 10px space
 
+        // EXIT BUTTON
         JButton exitButton = new JButton("Exit");
         exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         exitButton.setFont(new Font("Arial", Font.BOLD, 24));
@@ -64,6 +70,7 @@ public class StartPanel extends JPanel {
             }
         });
         this.add(exitButton);
+        // END OF EXIT BUTTON
     }
 
     @Override
