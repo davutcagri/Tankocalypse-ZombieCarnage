@@ -2,7 +2,7 @@ package models;
 
 import java.awt.*;
 
-public class Model {
+public class Model extends Thread {
     private int x, y;
     private double radian;
     private Image texture;
@@ -65,5 +65,9 @@ public class Model {
 
     public int getHeight() {
         return height;
+    }
+
+    public Rectangle getBounds() {
+        return new Rectangle(x, y, width, height);
     }
 }

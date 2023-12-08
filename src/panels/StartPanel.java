@@ -11,15 +11,15 @@ import java.io.IOException;
 
 public class StartPanel extends JPanel {
     private BufferedImage backgroundImage;
+    private BufferedImage logoImage;
 
     public StartPanel(CardLayout cardLayout, JPanel cardPanel) {
-        System.out.println("Start Screen");
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         try {
             backgroundImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\background.jpg"));
-            Image logo = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\logo.png"));
-            JLabel logoLabel = new JLabel(new ImageIcon(logo));
+            logoImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\logo.png"));
+            JLabel logoLabel = new JLabel(new ImageIcon(logoImage));
             logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
             this.add(logoLabel);
         } catch (IOException e) {
@@ -50,7 +50,7 @@ public class StartPanel extends JPanel {
         settingsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                // Ayarlar ekranını gösterme kodu buraya gelebilir.
             }
         });
         this.add(settingsButton);
@@ -79,6 +79,5 @@ public class StartPanel extends JPanel {
         if (backgroundImage != null) {
             g.drawImage(backgroundImage, 0, 0, 904, 700, this);
         }
-
     }
 }

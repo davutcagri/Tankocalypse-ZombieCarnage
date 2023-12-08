@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class Character extends Model{
+public class Character extends Model {
 
     public Character(int x, int y) {
         super(x, y, 90, 60);

@@ -5,11 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Window extends JFrame {
-    private static CardLayout cardLayout;
-    private static JPanel cardPanel;
-    private StartPanel startPanel;
-    private GamePanel gamePanel;
-    private int screenWidth, screenHeight;
+    private JPanel cardPanel;
+    private final int screenWidth, screenHeight;
 
     public Window(int screenWidth, int screenHeight) {
         this.screenWidth = screenWidth;
@@ -22,19 +19,17 @@ public class Window extends JFrame {
         loadPanels();
         this.add(cardPanel);
         this.setVisible(true);
-
     }
 
     public void loadPanels() {
-        cardLayout = new CardLayout();
+        CardLayout cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
 
-        startPanel = new StartPanel(cardLayout, cardPanel);
-        gamePanel = new GamePanel(cardLayout, cardPanel, screenWidth, screenHeight);
+        StartPanel startPanel = new StartPanel(cardLayout, cardPanel);
+        GamePanel gamePanel = new GamePanel(cardLayout, cardPanel, screenWidth, screenHeight);
 
-        cardLayout.show(cardPanel,  "startPage");
+        cardLayout.show(cardPanel, "startPage");
         cardPanel.add(startPanel, "startPage");
         cardPanel.add(gamePanel, "gamePage");
     }
-
 }

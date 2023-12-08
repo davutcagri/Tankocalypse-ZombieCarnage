@@ -1,9 +1,12 @@
 package models;
 
 import java.awt.*;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
-public class Bullet extends Thread {
-    private double x, y;
+public class Bullet implements Runnable {
+    private int x, y;
     private final int r;
     private final int targetX, targetY;
     private final int speed;
@@ -21,7 +24,7 @@ public class Bullet extends Thread {
     public void draw(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(Color.BLACK);
-        g2d.fillOval((int) x, (int) y, r, r);
+        g2d.fillOval(x, y, r, r);
     }
 
     public boolean isActive() {
@@ -36,20 +39,21 @@ public class Bullet extends Thread {
         double stepX = (dx / distance) * speed / 1000.0;
         double stepY = (dy / distance) * speed / 1000.0;
 
-        while (true) {
-            x += stepX;
-            y += stepY;
+        ScheduledExecutorService executor = new ScheduledThreadPoolExecutor(1);
+        executor.scheduleAtFixedRate(() -> {
+            if (active) {
+                x += (int) stepX;
+                y += (int) stepY;
 
-            if(x > 800 || y > 700 || x < 0 || y < 0) {
-                active = false;
-                break;
+                if (x > 800 || y > 700 || x < 0 || y < 0) {
+                    active = false;
+                    executor.shutdown();
+                }
             }
+        }, 0, 16, TimeUnit.MILLISECONDS);
+    }
 
-            try {
-                Thread.sleep(16);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-            }
-        }
+    public Rectangle getBounds() {
+        return new Rectangle(x, y, r, r);
     }
 }

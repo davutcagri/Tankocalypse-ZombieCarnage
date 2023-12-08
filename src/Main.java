@@ -1,5 +1,9 @@
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-        new Window(800, 700);
+        SwingUtilities.invokeLater(() -> {
+            new Window(904, 700);
+        });
     }
 }
