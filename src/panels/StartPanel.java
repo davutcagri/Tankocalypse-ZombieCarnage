@@ -13,9 +13,8 @@ public class StartPanel extends JPanel {
     private BufferedImage backgroundImage;
     private BufferedImage logoImage;
 
-    public StartPanel(CardLayout cardLayout, JPanel cardPanel) {
+    public StartPanel(JFrame frame) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-
         try {
             backgroundImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\background.jpg"));
             logoImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\logo.png"));
@@ -26,23 +25,22 @@ public class StartPanel extends JPanel {
             System.out.println("Start screen texture exception: " + e.getMessage());
         }
 
-        // START BUTTON
-        JButton startButton = new JButton("Start");
+        // Start Button
+        JButton startButton = new JButton("Start Game");
         startButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         startButton.setFont(new Font("Arial", Font.BOLD, 24));
         startButton.setMaximumSize(new Dimension(200, 50));
         startButton.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
-                cardLayout.show(cardPanel, "gamePage");
+                frame.setContentPane(new GamePanel());
+                frame.invalidate();
+                frame.validate();
             }
         });
         this.add(startButton);
-        // END OF START BUTTON
-
         this.add(Box.createVerticalStrut(10)); // 10px space
 
-        // SETTINGS BUTTON
+        // Settings Button
         JButton settingsButton = new JButton("Settings");
         settingsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         settingsButton.setFont(new Font("Arial", Font.BOLD, 24));
@@ -54,11 +52,9 @@ public class StartPanel extends JPanel {
             }
         });
         this.add(settingsButton);
-        // END OF SETTINGS BUTTON
-
         this.add(Box.createVerticalStrut(10)); // 10px space
 
-        // EXIT BUTTON
+        // Exit Button
         JButton exitButton = new JButton("Exit");
         exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         exitButton.setFont(new Font("Arial", Font.BOLD, 24));
@@ -70,7 +66,6 @@ public class StartPanel extends JPanel {
             }
         });
         this.add(exitButton);
-        // END OF EXIT BUTTON
     }
 
     @Override

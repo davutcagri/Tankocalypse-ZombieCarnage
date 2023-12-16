@@ -8,6 +8,8 @@ import java.io.IOException;
 
 public class Character extends Model {
 
+    private int health = 100;
+
     public Character(int x, int y) {
         super(x, y, 90, 60);
 
@@ -17,6 +19,21 @@ public class Character extends Model {
             super.setTexture(texture);
         } catch (IOException e) {
             System.out.println("Character model texture exception: " + e.getMessage());
+        }
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public void reduceHealth(int amount) {
+        health -= amount;
+        if (health < 0) {
+            health = 0;
         }
     }
 }

@@ -15,7 +15,8 @@ public class Enemy extends Model {
         super(x, y, 50, 50);
         this.targetX = targetX;
         this.targetY = targetY;
-        this.speed = 1000;
+        this.speed = 500;
+//        this.rotate(targetX, targetY);
 
         try {
             BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\zombie.png"));
@@ -28,15 +29,21 @@ public class Enemy extends Model {
 
     @Override
     public void run() {
-        double dx = targetX - getX();
-        double dy = targetY - getY();
-        double distance = Math.sqrt(dx * dx + dy * dy);
+        double centerX = getX() - (double) getWidth() / 2;
+        double centerY = getY() - (double) getHeight() / 2;
+
+        double dx = targetX - centerX;
+        double dy = targetY - centerY;
+        double distance = Math.sqrt((dx * dx) + (dy * dy));
         double stepX = (dx / distance) * speed / 1000.0;
         double stepY = (dy / distance) * speed / 1000.0;
 
         while (!exit) {
-            setX(getX() + (int) stepX);
-            setY(getY() + (int) stepY);
+            centerX += stepX;
+            centerY += stepY;
+
+            setX((int) (centerX + getWidth() / 2));
+            setY((int) (centerY + getHeight() / 2));
 
             try {
                 Thread.sleep(16);
