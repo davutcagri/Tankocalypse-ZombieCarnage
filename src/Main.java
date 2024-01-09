@@ -5,7 +5,7 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            try{
+            try {
                 JFrame jFrame = new JFrame();
                 jFrame.setTitle("Tank vs Zombies");
                 jFrame.setSize(800, 700);
