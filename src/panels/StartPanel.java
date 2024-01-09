@@ -16,8 +16,8 @@ public class StartPanel extends JPanel {
     public StartPanel(JFrame frame) {
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         try {
-            backgroundImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\background.jpg"));
-            logoImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\logo.png"));
+            backgroundImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\resource\\images\\background.jpg"));
+            logoImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\resource\\images\\logo.png"));
             JLabel logoLabel = new JLabel(new ImageIcon(logoImage));
             logoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
             this.add(logoLabel);
@@ -32,7 +32,8 @@ public class StartPanel extends JPanel {
         startButton.setMaximumSize(new Dimension(200, 50));
         startButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                frame.setContentPane(new GamePanel());
+                frame.getContentPane().removeAll();
+                frame.setContentPane(new GamePanel(frame));
                 frame.invalidate();
                 frame.validate();
             }
@@ -41,7 +42,7 @@ public class StartPanel extends JPanel {
         this.add(Box.createVerticalStrut(10)); // 10px space
 
         // Settings Button
-        JButton settingsButton = new JButton("Settings");
+        /*JButton settingsButton = new JButton("Settings");
         settingsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         settingsButton.setFont(new Font("Arial", Font.BOLD, 24));
         settingsButton.setMaximumSize(new Dimension(200, 50));
@@ -52,7 +53,7 @@ public class StartPanel extends JPanel {
             }
         });
         this.add(settingsButton);
-        this.add(Box.createVerticalStrut(10)); // 10px space
+        this.add(Box.createVerticalStrut(10)); // 10px space*/
 
         // Exit Button
         JButton exitButton = new JButton("Exit");

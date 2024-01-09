@@ -16,10 +16,9 @@ public class Enemy extends Model {
         this.targetX = targetX;
         this.targetY = targetY;
         this.speed = 500;
-//        this.rotate(targetX, targetY);
 
         try {
-            BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\zombie.png"));
+            BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\resource\\images\\zombie.png"));
             Image texture = bufferedImage.getScaledInstance(super.getWidth(), super.getHeight(), Image.SCALE_DEFAULT);
             super.setTexture(texture);
         } catch (IOException e) {

@@ -3,6 +3,7 @@ package panels;
 import models.Bullet;
 import models.Character;
 import models.Enemy;
+import models.Sound;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -23,16 +24,21 @@ public class GamePanel extends JPanel {
     private JLabel waveLabel, scoreLabel, healthLabel;
     private final List<Bullet> bullets = new ArrayList<>();
     private final List<Enemy> enemies = new ArrayList<>();
+    private List<Timer> bulletTimers = new ArrayList<>();
+    private List<Timer> enemyTimers = new ArrayList<>();
     private int score;
     private int healthReductionAmount = 10;
     private int wave = 1;
+    private JFrame frame;
+    private Sound sound = new Sound();
 
-    public GamePanel() {
+    public GamePanel(JFrame frame) {
         this.originX = 800 / 2;
         this.originY = 700 / 2;
         this.addMouseMotionListener(new GameMouseListener());
         this.addMouseListener(new GameMouseListener());
         this.addKeyListener(new GameKeyboardListener());
+        this.frame = frame;
         init();
     }
 
@@ -63,7 +69,7 @@ public class GamePanel extends JPanel {
 
     private void loadMapTexture() {
         try {
-            map = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\map.jpg"));
+            map = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\resource\\images\\map.jpg"));
         } catch (IOException e) {
             System.out.println("Map texture exception: " + e.getMessage());
         }
@@ -72,10 +78,12 @@ public class GamePanel extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        Graphics enemyG = g.create();
         Graphics g2 = g.create();
+
         drawMap(g2);
         drawBullets(g2);
-        drawEnemies(g2);
+        drawEnemies(enemyG);
         drawCharacter(g2);
     }
 
@@ -102,6 +110,7 @@ public class GamePanel extends JPanel {
             enemy.draw(g);
         }
     }
+
 
     private void drawCharacter(Graphics g) {
         character.draw(g);
@@ -179,7 +188,7 @@ public class GamePanel extends JPanel {
                     x = random.nextInt(maxX);
                     y = random.nextInt(maxY);
             }
-            Enemy enemy = new Enemy(x, y , character.getX(), character.getY());
+            Enemy enemy = new Enemy(x, y, character.getX(), character.getY());
             enemies.add(enemy);
             enemy.start();
         }
@@ -212,8 +221,12 @@ public class GamePanel extends JPanel {
     }
 
     private void startNewWave() {
-        if(wave == 5) {
-            
+        if (wave == 5) {
+            frame.getContentPane().removeAll();
+            stopGame();
+            frame.setContentPane(new FinishPanel("Game Finished", frame));
+            frame.invalidate();
+            frame.validate();
         } else {
             wave++;
             generateEnemies();
@@ -228,10 +241,19 @@ public class GamePanel extends JPanel {
             Enemy enemy = enemyIterator.next();
             Rectangle enemyR = enemy.getBounds();
             if (characterR.intersects(enemyR)) {
+                playSound(1);
                 enemy.exit();
                 enemyIterator.remove();
-                character.reduceHealth(healthReductionAmount);
-                healthLabel.setText("Health: %" + character.getHealth());
+                if (character.getHealth() == 10) {
+                    frame.getContentPane().removeAll();
+                    stopGame();
+                    frame.setContentPane(new FinishPanel("Game Over", frame));
+                    frame.invalidate();
+                    frame.validate();
+                } else {
+                    character.reduceHealth(healthReductionAmount);
+                    healthLabel.setText("Health: %" + character.getHealth());
+                }
                 waveLabel.setText("Wave: " + wave);
             }
         }
@@ -247,6 +269,7 @@ public class GamePanel extends JPanel {
             Enemy enemy = enemyIterator.next();
             Rectangle enemyR = enemy.getBounds();
             if (bulletR.intersects(enemyR)) {
+                playSound(0);
                 enemyIterator.remove();
                 bullets.remove(bullet);
                 score++;
@@ -257,5 +280,17 @@ public class GamePanel extends JPanel {
         if (enemies.isEmpty()) {
             startNewWave();
         }
+    }
+
+    private void stopGame() {
+        for (Enemy enemy : enemies) {
+            enemy.exit();
+        }
+    }
+
+
+    private void playSound(int i) {
+        sound.setFile(i);
+        sound.play();
     }
 }

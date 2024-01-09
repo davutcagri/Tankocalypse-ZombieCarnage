@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c9df19d-d97c-4741-a8c7-774c5e45ebb1" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/models/Sound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/panels/FinishPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tankocalypse-ZombieCarnage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tankocalypse-ZombieCarnage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resource/images/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/character.png" beforeDir="false" afterPath="$PROJECT_DIR$/resource/images/character.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/explosion-effect.png" beforeDir="false" afterPath="$PROJECT_DIR$/resource/images/explosion-effect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/resource/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/map.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resource/images/map.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/old_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resource/images/old_background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/zombie.png" beforeDir="false" afterPath="$PROJECT_DIR$/resource/images/zombie.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Character.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/panels/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/panels/StartPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/StartPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/UML.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/UML.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,6 +44,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2ZFv6noY9RdQsFvNF5AKPxcq8IK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,10 +62,19 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\Tankocalypse-ZombieCarnage\resource" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -83,6 +107,8 @@
       <workItem from="1702699795908" duration="15000" />
       <workItem from="1702711258915" duration="1624000" />
       <workItem from="1702745192914" duration="8933000" />
+      <workItem from="1704738727274" duration="3272000" />
+      <workItem from="1704815910990" duration="10451000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -101,5 +127,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="models.Sound" memberName="clip" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Tankocalypse_ZombieCarnage$Main.ic" NAME="Main Coverage Results" MODIFIED="1704821656369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

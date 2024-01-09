@@ -14,7 +14,7 @@ public class Character extends Model {
         super(x, y, 90, 60);
 
         try {
-            BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\images\\character.png"));
+            BufferedImage bufferedImage = ImageIO.read(new File("D:\\work\\Tankocalypse-ZombieCarnage\\resource\\images\\character.png"));
             Image texture = bufferedImage.getScaledInstance(super.getWidth(), super.getHeight(), Image.SCALE_DEFAULT);
             super.setTexture(texture);
         } catch (IOException e) {
@@ -24,10 +24,6 @@ public class Character extends Model {
 
     public int getHealth() {
         return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
     }
 
     public void reduceHealth(int amount) {
